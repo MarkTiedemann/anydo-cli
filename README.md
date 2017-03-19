@@ -16,15 +16,28 @@ $ anydo --help
   Unofficial Any.do CLI app.
 
   - Login
-    $ anydo login --email you@example.org --password super-secret
+    $ anydo login
+      --email you@example.org  (required!)
+      --password super-secret  (required!)
 
   - List your tasks
     $ anydo [tasks]
+      --done     include done tasks
+      --deleted  include deleted tasks
+      --undated  include tasks without due date
 
   - Logout
     $ anydo logout
 
 ```
+
+## Todos
+
+- New features
+  - Add lists command
+  - Add task sort option (by title, by due date, by priority, etc.)
+  - Add task format option (list, table, json, etc.)
+- Add tests
 
 ## API
 

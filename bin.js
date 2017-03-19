@@ -11,10 +11,15 @@ updateNotifier({ pkg }).notify()
 
 const cli = meow(`
   - Login
-    $ anydo login --email you@example.org --password super-secret
+    $ anydo login
+      --email you@example.org  (required!)
+      --password super-secret  (required!)
 
   - List your tasks
     $ anydo [tasks]
+      --done     include done tasks
+      --deleted  include deleted tasks
+      --undated  include tasks without due date
 
   - Logout
     $ anydo logout
@@ -51,11 +56,16 @@ const logout = () => {
 const tasks = () => {
   const auth = config.get('anydo.auth')
   if (!auth) return fail('Please login first via the `login` command')
-  anydo.sync({ auth }, (err, res) => {
+  anydo.sync({
+    auth,
+    includeDone: flags.done || false,
+    includeDeleted: flags.deleted || false
+  }, (err, res) => {
     if (err) return fail(err.message)
     parseBody(res, (err, body) => {
       if (err) return fail(err.message)
       body.models.task.items
+        .filter(t => flags.undated ? true : t.dueDate)
         .map(t => '- ' + t.title)
         .forEach(t => console.log(t))
     })
