@@ -1,0 +1,32 @@
+{
+  "name": "anydo-cli",
+  "version": "0.2.0",
+  "description": "Unofficial Any.do CLI app.",
+  "bin": {
+    "anydo": "bin.js"
+  },
+  "scripts": {
+    "test": "standard --fix"
+  },
+  "keywords": [],
+  "author": "Mark Tiedemann <www.marktiedemann@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "anydo": "^0.2.0",
+    "conf": "^0.12.0",
+    "meow": "^3.7.0",
+    "update-notifier": "^2.1.0"
+  },
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
+  "main": "bin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkTiedemann/anydo-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarkTiedemann/anydo-cli/issues"
+  },
+  "homepage": "https://github.com/MarkTiedemann/anydo-cli"
+}
