@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install anydo --global
+npm install anydo-cli --global
 ```
 
 ## Quickstart
