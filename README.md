@@ -28,7 +28,7 @@ $ anydo --help
 
 ## API
 
-**See [MarkTiedemann/anydo](https://github.com/MarkTiedemann/anydo).**
+**See: [MarkTiedemann/anydo](https://github.com/MarkTiedemann/anydo).**
 
 ## License
 
