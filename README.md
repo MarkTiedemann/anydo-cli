@@ -13,7 +13,7 @@ npm install anydo-cli --global
 ```
 $ anydo --help
 
-  Any.do CLI app.
+  Unofficial Any.do CLI app.
 
   - Login
     $ anydo login --email you@example.org --password super-secret
