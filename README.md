@@ -25,6 +25,7 @@ $ anydo --help
       --done     include done tasks
       --deleted  include deleted tasks
       --undated  include tasks without due date
+      --checked  include checked tasks
 
   - Logout
     $ anydo logout

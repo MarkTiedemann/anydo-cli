@@ -20,6 +20,7 @@ const cli = meow(`
       --done     include done tasks
       --deleted  include deleted tasks
       --undated  include tasks without due date
+      --checked  include checked tasks
 
   - Logout
     $ anydo logout
@@ -66,6 +67,7 @@ const tasks = () => {
       if (err) return fail(err.message)
       body.models.task.items
         .filter(t => flags.undated ? true : t.dueDate)
+        .filter(t => flags.checked ? true : t.status !== 'CHECKED')
         .map(t => '- ' + t.title)
         .forEach(t => console.log(t))
     })
